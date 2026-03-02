@@ -1,18 +1,8 @@
 # Getting Started with Create React App
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
-⚠️ If you see a "Firebase: Error (auth/configuration-not-found)" message when trying to register users, enable Email/Password sign-in in the Firebase Console:
-
-- Go to the Firebase Console → Project settings → Authentication → Sign-in method
-- Enable **Email/Password** provider
-
-You can also set the project id as an environment variable for convenience in development:
-- Add `REACT_APP_FIREBASE_PROJECT_ID=your-project-id` to a `.env` file in the project root (this is used to generate direct links to console in error messages).
-
 
 In the project directory, you can run:
 
@@ -78,39 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
----
-
-## Local Emulator Usage ⚙️
-
-You can run Firebase local emulators (Auth, Firestore, Storage) for development and for the optional emulator integration test.
-
-- Start the emulators (from your project root):
-
-  - Install Firebase CLI if you don't have it already:
-
-    ```bash
-    npm i -g firebase-tools
-    ```
-
-  - Start only the necessary emulators:
-
-    ```bash
-    firebase emulators:start --only auth,firestore,storage
-    ```
-
-- Environment variables (see `.env.example`):
-  - `REACT_APP_USE_FIREBASE_EMULATORS=true`
-  - `REACT_APP_FIRESTORE_EMULATOR_HOST=localhost`
-  - `REACT_APP_FIRESTORE_EMULATOR_PORT=8080`
-  - `REACT_APP_AUTH_EMULATOR_URL=http://localhost:9099`
-  - `REACT_APP_STORAGE_EMULATOR_HOST=localhost`
-  - `REACT_APP_STORAGE_EMULATOR_PORT=9199`
-
-- Run the integration test (requires emulators to be running):
-
-  ```bash
-  npm test -- src/firebase/__tests__/emulatorSync.test.js -i
-  ```
-
-> Note: The test will automatically skip unless `REACT_APP_USE_FIREBASE_EMULATORS=true` is set in the environment.

@@ -21,7 +21,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:emulator": "cross-env REACT_APP_USE_FIREBASE_EMULATORS=true npm test -- src/firebase/__tests__/emulatorSync.test.js -i --runInBand",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,9 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "cross-env": "^10.1.0",
-    "firebase-tools": "^15.5.1"
   }
 }
